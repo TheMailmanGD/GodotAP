@@ -1,0 +1,167 @@
+[gd_scene format=3 uid="uid://dpfwodbw3vjxn"]
+
+[ext_resource type="Script" uid="uid://cwyf8oeuh5cye" path="res://logic 1.gd" id="1_r314q"]
+[ext_resource type="Texture2D" uid="uid://dhssrbruarllf" path="res://sleeping.jpg" id="2_yia4p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_r314q"]
+font_size = 50
+
+[sub_resource type="Animation" id="Animation_ywiuv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/Images:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_yia4p"]
+resource_name = "red"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/Images:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2r1l1"]
+_data = {
+&"RESET": SubResource("Animation_ywiuv"),
+&"red": SubResource("Animation_yia4p")
+}
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1062360047]
+script = ExtResource("1_r314q")
+
+[node name="Control" type="Control" parent="." unique_id=1472962906]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1464709496]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="Control/VBoxContainer" unique_id=800508327]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Filler text"
+label_settings = SubResource("LabelSettings_r314q")
+
+[node name="GridContainer" type="GridContainer" parent="Control/VBoxContainer" unique_id=595701935]
+layout_mode = 2
+columns = 2
+
+[node name="Option1" type="Button" parent="Control/VBoxContainer/GridContainer" unique_id=23051488]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+text = "AAAAA"
+
+[node name="Option2" type="Button" parent="Control/VBoxContainer/GridContainer" unique_id=1504427999]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+text = "AAAAA"
+
+[node name="Option3" type="Button" parent="Control/VBoxContainer/GridContainer" unique_id=615219420]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+text = "AAAAA"
+
+[node name="Option4" type="Button" parent="Control/VBoxContainer/GridContainer" unique_id=1093689717]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+text = "AAAAA"
+
+[node name="Images" type="TextureRect" parent="Control" unique_id=23184811]
+unique_name_in_owner = true
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_yia4p")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1197938343]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=436567583]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=627044394]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer" unique_id=1828954493]
+layout_mode = 2
+
+[node name="Mentalhealth" type="Label" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer" unique_id=1148623658]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Mental Health: 50  "
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer" unique_id=1741463949]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+max_value = 20.0
+value = 10.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer" unique_id=971639344]
+layout_mode = 2
+
+[node name="Physicalhealth" type="Label" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer2" unique_id=1607278693]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Physical Health: 50"
+
+[node name="ProgressBar2" type="ProgressBar" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer2" unique_id=1791949113]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+max_value = 20.0
+value = 10.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=552605759]
+libraries/ = SubResource("AnimationLibrary_2r1l1")
+
+[connection signal="pressed" from="Control/VBoxContainer/GridContainer/Option1" to="." method="_on_option_1_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/GridContainer/Option2" to="." method="_on_option_2_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/GridContainer/Option3" to="." method="_on_option_3_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/GridContainer/Option4" to="." method="_on_option_4_pressed"]

@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjbi8e5ph3sk0"]
+
+[ext_resource type="Script" uid="uid://mw1psqn8s5bb" path="res://ui.gd" id="1_fyqef"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_fyqef")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="Mentalhealth" type="Label" parent="Control/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Mental Health: 50  "
+
+[node name="ProgressBar" type="ProgressBar" parent="Control/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+value = 50.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="Physicalhealth" type="Label" parent="Control/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Physical Health: 50"
+
+[node name="ProgressBar" type="ProgressBar" parent="Control/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+value = 50.0

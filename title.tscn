@@ -1,0 +1,168 @@
+[gd_scene load_steps=21 format=3 uid="uid://b7olic0ceirhw"]
+
+[ext_resource type="Script" uid="uid://botlb7e4vikgv" path="res://title.gd" id="1_01k44"]
+[ext_resource type="Texture2D" uid="uid://xc2sgpwh88dw" path="res://bussin'.jpg" id="1_h4c81"]
+[ext_resource type="Texture2D" uid="uid://c0fk1ypvs6nc8" path="res://eat breakfast.jpg" id="2_01k44"]
+[ext_resource type="Texture2D" uid="uid://dy61jp2soxdsy" path="res://enter house.jpg" id="3_ynqpd"]
+[ext_resource type="Texture2D" uid="uid://dremgtu8we66o" path="res://exit house.jpg" id="4_oyroy"]
+[ext_resource type="Texture2D" uid="uid://cac5xk843lyw2" path="res://fall.jpg" id="5_h34e7"]
+[ext_resource type="Texture2D" uid="uid://k5appwnsk2ao" path="res://looking out of window.jpg" id="6_ukkme"]
+[ext_resource type="Texture2D" uid="uid://803ydojkdqks" path="res://out of window.jpg" id="7_cl5v0"]
+[ext_resource type="Texture2D" uid="uid://n31fya7xq4d7" path="res://parents confused.jpg" id="8_8joit"]
+[ext_resource type="Texture2D" uid="uid://2vwk73af85h8" path="res://quitting school.jpg" id="9_c2iau"]
+[ext_resource type="Texture2D" uid="uid://du4c4btjmje4q" path="res://reach for phone.jpg" id="10_nstin"]
+[ext_resource type="Texture2D" uid="uid://cfa1f11brwjjw" path="res://sad.jpg" id="11_m6auj"]
+[ext_resource type="Texture2D" uid="uid://dtw10j0kmmhih" path="res://sleep bus.jpg" id="12_4l1ud"]
+[ext_resource type="Texture2D" uid="uid://dhssrbruarllf" path="res://sleeping.jpg" id="13_2p1hy"]
+[ext_resource type="Texture2D" uid="uid://dhp7hrssls3g0" path="res://smash alarm clock.jpg" id="14_xvydc"]
+[ext_resource type="Texture2D" uid="uid://dhkqk2vuuog50" path="res://wake up.jpg" id="15_3csos"]
+[ext_resource type="Texture2D" uid="uid://c30fccq4sm74w" path="res://walk indoors.jpg" id="16_5n3y1"]
+[ext_resource type="Texture2D" uid="uid://bh8xuafbayrxo" path="res://walk outside.jpg" id="17_udwf2"]
+[ext_resource type="Texture2D" uid="uid://cmsrg5l8euhx1" path="res://school.jpg" id="18_7fa8w"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_k2urm"]
+font_size = 50
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_01k44")
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 54.0
+offset_right = 666.0
+offset_bottom = 123.0
+text = "Get To School"
+label_settings = SubResource("LabelSettings_k2urm")
+clip_text = true
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 372.0
+offset_top = 126.0
+offset_right = 592.0
+offset_bottom = 149.0
+text = "A game about mental health"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 446.0
+offset_top = 186.0
+offset_right = 492.0
+offset_bottom = 217.0
+text = "Start"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 424.0
+offset_top = 234.0
+offset_right = 527.0
+offset_bottom = 265.0
+text = "How To Play"
+
+[node name="Bussin\'" type="Sprite2D" parent="."]
+position = Vector2(134, 634)
+texture = ExtResource("1_h4c81")
+
+[node name="EatBreakfast" type="Sprite2D" parent="."]
+position = Vector2(364.25, 450.75)
+scale = Vector2(1.54727, 1.68033)
+texture = ExtResource("2_01k44")
+
+[node name="EnterHouse" type="Sprite2D" parent="."]
+position = Vector2(653, 627)
+scale = Vector2(1.27397, 1.30925)
+texture = ExtResource("3_ynqpd")
+
+[node name="ExitHouse" type="Sprite2D" parent="."]
+position = Vector2(77, 245)
+texture = ExtResource("4_oyroy")
+
+[node name="Fall" type="Sprite2D" parent="."]
+position = Vector2(828, 375)
+texture = ExtResource("5_h34e7")
+
+[node name="LookingOutOfWindow" type="Sprite2D" parent="."]
+position = Vector2(801, 194)
+texture = ExtResource("6_ukkme")
+
+[node name="OutOfWindow" type="Sprite2D" parent="."]
+position = Vector2(96, 61)
+texture = ExtResource("7_cl5v0")
+
+[node name="ParentsConfused" type="Sprite2D" parent="."]
+position = Vector2(962, 646)
+texture = ExtResource("8_8joit")
+
+[node name="QuittingSchool" type="Sprite2D" parent="."]
+position = Vector2(815, 506)
+texture = ExtResource("9_c2iau")
+
+[node name="ReachForPhone" type="Sprite2D" parent="."]
+position = Vector2(684, 252)
+texture = ExtResource("10_nstin")
+
+[node name="Sad" type="Sprite2D" parent="."]
+position = Vector2(294, 261.5)
+scale = Vector2(0.934426, 0.89372)
+texture = ExtResource("11_m6auj")
+
+[node name="SleepBus" type="Sprite2D" parent="."]
+position = Vector2(1056.88, 106.125)
+scale = Vector2(1.18636, 1.15984)
+texture = ExtResource("12_4l1ud")
+
+[node name="Sleeping" type="Sprite2D" parent="."]
+position = Vector2(1026, 299)
+texture = ExtResource("13_2p1hy")
+
+[node name="SmashAlarmClock" type="Sprite2D" parent="."]
+position = Vector2(606, 430)
+texture = ExtResource("14_xvydc")
+
+[node name="WakeUp" type="Sprite2D" parent="."]
+position = Vector2(1063, 473)
+scale = Vector2(0.576797, 0.531863)
+texture = ExtResource("15_3csos")
+
+[node name="WalkIndoors" type="Sprite2D" parent="."]
+position = Vector2(372, 644)
+texture = ExtResource("16_5n3y1")
+
+[node name="WalkOutside" type="Sprite2D" parent="."]
+position = Vector2(31.75, 452.25)
+scale = Vector2(1.19818, 1.28142)
+texture = ExtResource("17_udwf2")
+
+[node name="School" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(544, 261)
+scale = Vector2(2.75091, 2.96448)
+texture = ExtResource("18_7fa8w")
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+z_index = 1
+layout_mode = 0
+offset_left = 23.0
+offset_top = 264.0
+offset_right = 1057.0
+offset_bottom = 526.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -21.0
+offset_top = 265.0
+offset_right = 1149.0
+offset_bottom = 533.0
+color = Color(0, 0, 0, 1)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
